@@ -40,7 +40,8 @@ class TarefaController extends Controller
      */
     public function create()
     {
-        //
+        $users = $this->objUser->all();
+        return view('criar', compact('users'));
     }
 
     /**
@@ -51,7 +52,15 @@ class TarefaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->objTarefa->create([
+            'titulo'=>$request->titulo,
+            'descricao'=>$request->descricao,
+            'finalizado'=>$request->finalizado,
+            'inicio_previsto'=>$request->inicio,
+            'fim_previsto'=>$request->fim,
+            'id_user'=>$request->id_user,
+            'id_categoria'=>$request->id_categoria
+        ]);
     }
 
     /**

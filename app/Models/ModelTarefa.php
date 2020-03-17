@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ModelTarefa extends Model
 {
     protected $table = 'tarefa';
+    protected $fillable=['titulo', 'descricao', 'finalizado', 'fim_previsto', 'inicio_previsto', 'id_categoria', 'id_user'];
 
 
     public function relUser(){
