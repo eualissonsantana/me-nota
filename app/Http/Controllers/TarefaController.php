@@ -41,7 +41,7 @@ class TarefaController extends Controller
     public function create()
     {
         $users = $this->objUser->all();
-        return view('criar', compact('users'));
+        return view('cria_tarefa', compact('users'));
     }
 
     /**
@@ -75,7 +75,7 @@ class TarefaController extends Controller
     public function show($id)
     {
         $tarefa = $this->objTarefa->find($id);
-        return view('exibeTarefa', compact('tarefa'));
+        return view('exibe_tarefa', compact('tarefa'));
     }
 
     /**
@@ -86,7 +86,9 @@ class TarefaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tarefa = $this->objTarefa->find('$id');
+        $users = $this->objUser->all();
+        return view('cria_tarefa', compact('tarefa', 'users'));
     }
 
     /**
@@ -98,7 +100,16 @@ class TarefaController extends Controller
      */
     public function update(TarefaRequest $request, $id)
     {
-        //
+        $this->objtarefa->where(['id'=>$id])->update([
+            'titulo'=>$request->titulo,
+            'descricao'=>$request->descricao,
+            'finalizado'=>$request->finalizado,
+            'inicio_previsto'=>$request->inicio,
+            'fim_previsto'=>$request->fim,
+            'id_user'=>$request->id_user,
+            'id_categoria'=>$request->id_categoria
+        ]);
+        return redirect('tarefas');
     }
 
     /**
