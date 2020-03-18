@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request\TarefaRequest;
 use App\Models\ModelTarefa;
 use App\Models\ModelCategoria;
 use App\User;
@@ -50,9 +50,9 @@ class TarefaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TarefaRequest $request)
     {
-        $this->objTarefa->create([
+        $cad = $this->objTarefa->create([
             'titulo'=>$request->titulo,
             'descricao'=>$request->descricao,
             'finalizado'=>$request->finalizado,
@@ -61,6 +61,9 @@ class TarefaController extends Controller
             'id_user'=>$request->id_user,
             'id_categoria'=>$request->id_categoria
         ]);
+        if($cad){
+            return redirect('tarefas');
+        }
     }
 
     /**
@@ -93,7 +96,7 @@ class TarefaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TarefaRequest $request, $id)
     {
         //
     }
