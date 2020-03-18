@@ -11,4 +11,8 @@ class ModelCategoria extends Model
     public function relTarefa(){
         return $this->hasMany('App\Models\ModelTarefa', 'id_user');
     }
+
+    public function relUser(){
+        return $this->hasOne('App\User', 'id', 'id_user');
+    }
 }

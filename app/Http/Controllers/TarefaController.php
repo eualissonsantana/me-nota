@@ -20,8 +20,6 @@ class TarefaController extends Controller
         $this->objTarefa = new ModelTarefa();
     }
 
-
-
     /**
      * Display a listing of the resource.
      *
@@ -100,7 +98,7 @@ class TarefaController extends Controller
      */
     public function update(TarefaRequest $request, $id)
     {
-        $this->objtarefa->where(['id'=>$id])->update([
+        $this->objTarefa->where(['id'=>$id])->update([
             'titulo'=>$request->titulo,
             'descricao'=>$request->descricao,
             'finalizado'=>$request->finalizado,
@@ -120,7 +118,7 @@ class TarefaController extends Controller
      */
     public function destroy($id)
     {
-        $del = $this->objTarefa->destroy('$id');
-        return($del)?"sim":"não";
+        $this->objTarefa->destroy('$id');
+        return redirect('tarefas');
     }
 }
