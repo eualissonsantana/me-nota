@@ -18,6 +18,12 @@ class ModelTarefa extends Model
         return $this->hasOne('App\Models\ModelCategoria', 'id', 'id_categoria');
     }
 
+    public function relProjeto(){
+        return $this->hasOne('App\Models\ModelProjeto', 'id', 'id_tarefa');
+    }
 
+    public function relComentario(){
+        return $this->hasMany('App\Models\ModelComentario', 'id_tarefa');
+    }
 
 }

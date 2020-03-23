@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function relTarefa(){
         return $this->hasMany('App\Models\ModelTarefa', 'id_user');
     }
+
+    public function relProjeto(){
+        return $this->hasMany('App\Models\ModelProjeto', 'id_user');
+    }
 }

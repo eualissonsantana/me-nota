@@ -17,13 +17,17 @@ class CreateModelTarefasTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('descricao');
-            $table->boolean('finalizado');
+            $table->enum('situacao',['to_do', 'doing', 'done']);
             $table->dateTime('inicio_previsto');
             $table->dateTime('fim_previsto');
             $table->integer('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('id_categoria')->unsigned();
             $table->foreign('id_categoria')->references('id')->on('categoria')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('id_tarefa')->unsigned();
+            $table->foreign('id_tarefa')->references('id')->on('tarefa')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('id_projeto')->unsigned();
+            $table->foreign('id_projeto')->references('id')->on('projeto')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
