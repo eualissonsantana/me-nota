@@ -19,7 +19,6 @@
 
         <section class="box">
            <article class="title">
-                <h2>Tarefas pendentes</h2>
            </article>
         </section>
 

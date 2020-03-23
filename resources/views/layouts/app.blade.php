@@ -17,24 +17,37 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{url('assets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url('assets/style.css')}}">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+            <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
+                    <section class="left-side mr-auto">
+                        <section class="row title-quadro">
+                            <h3>Quadro de tarefas</h3>
+                        </section>
+                        
+                        <ul class="row opcoes nav nav-tabs pull-left ulist sel-list" role="tablist">
+                            <li role="presentation" class="f-item active">
+                                <a href="#" role="tab">Lista</a href="#" role="tab">
+                            </li>
+                            <li role="presentation" class="f-item active">
+                                <a href="#" role="tab">Quadro</a href="#" role="tab">
+                            </li>
+                            <li role="presentation" class="f-item active">
+                                <a href="#" role="tab">Visão geral</a href="#" role="tab">
+                            </li>
+                        </ul>
+                    </section>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
