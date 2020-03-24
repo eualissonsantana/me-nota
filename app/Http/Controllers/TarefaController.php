@@ -28,7 +28,7 @@ class TarefaController extends Controller
     public function index()
     {
         $tarefa = $this->objTarefa->all();
-        return view('index', compact('tarefa'));
+        return view('lista_tarefas', compact('tarefa'));
     }
 
     /**
