@@ -43,7 +43,7 @@
                                 
                                 <ul class="row opcoes nav nav-tabs pull-left ulist sel-list" role="tablist">
                                     <li role="presentation" class="f-item active temp">
-                                        <a href="{{ route('tarefas.index') }}" role="tab">Lista</a href="#" role="tab">
+                                        <a href="#" role="tab">Lista</a href="#" role="tab">
                                     </li>
                                     <li role="presentation" class="f-item active">
                                         <a href="#" role="tab">Quadro</a href="#" role="tab">

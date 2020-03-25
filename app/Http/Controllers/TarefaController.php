@@ -26,10 +26,10 @@ class TarefaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public static function index()
+    public function index()
     {
         $tarefa = $this->objTarefa->all();
-        return view('lista_tarefas', compact('tarefa'));
+        return view('home', compact('tarefa'));
     }
 
     /**

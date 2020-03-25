@@ -10,8 +10,9 @@
                     {{ session('status') }}
                 </div>
             @endif
+            
 
-           @include('lista_tarefas')
+            @include('lista_tarefas')
         </div>
     <!--
         <section class="opcoes row d-flex justify-content-center">
