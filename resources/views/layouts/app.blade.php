@@ -20,6 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{url('assets/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url('assets/style.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <div id="app">
@@ -42,7 +43,7 @@
                                 
                                 <ul class="row opcoes nav nav-tabs pull-left ulist sel-list" role="tablist">
                                     <li role="presentation" class="f-item active temp">
-                                        <a href="#" role="tab">Lista</a href="#" role="tab">
+                                        <a href="{{ route('tarefas.index') }}" role="tab">Lista</a href="#" role="tab">
                                     </li>
                                     <li role="presentation" class="f-item active">
                                         <a href="#" role="tab">Quadro</a href="#" role="tab">

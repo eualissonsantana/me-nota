@@ -40,6 +40,10 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ], 
+        
+        "files": [
+            "app/Http/Helpers/functions.php"
         ]
     },
     "autoload-dev": {
@@ -61,4 +65,6 @@
             "@php artisan key:generate --ansi"
         ]
     }
+
+    
 }

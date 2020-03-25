@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request\TarefaRequest;
+use App\Providers\RouteServiceProvider;
 use App\Models\ModelTarefa;
 use App\Models\ModelCategoria;
 use App\User;
@@ -25,7 +26,7 @@ class TarefaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public static function index()
     {
         $tarefa = $this->objTarefa->all();
         return view('lista_tarefas', compact('tarefa'));

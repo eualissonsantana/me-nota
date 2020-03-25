@@ -1,3 +1,6 @@
+<?php
+    use \App\Http\Controllers\ControllerName;
+?>
 <section class="container col-8 lista-tarefas">
     <table class="table table-borderless table-hover table-sm">
         <thead class="thead-light">
@@ -8,7 +11,9 @@
             </tr>
         </thead>
         <tbody>
-
+            <?php
+                \App\Http\Controllers\TarefaController::index()
+            ?>
             @foreach($tarefa as $tar)
             @php
                 $tag = $tar->find($tar->id)->relCategoria;

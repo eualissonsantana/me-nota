@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'TarefaController@index');
+Route::get('/tarefas', 'TarefaController@index');
 Route::get('/users', 'UserController@index');
 Route::get('/categorias', 'UserController@index');
 

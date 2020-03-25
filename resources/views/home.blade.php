@@ -11,31 +11,7 @@
                 </div>
             @endif
 
-            <section class="container col-8 lista-tarefas">
-                <table class="table table-borderless table-hover table-sm">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">tarefa</th>
-                            <th scope="col">data</th>
-                            <th scope="col">tag</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @foreach($tarefa as $tar)
-                        @php
-                            $tag = $tar->find($tar->id)->relCategoria;
-                        @endphp
-                        <tr>
-                            <td>{{$tar->titulo}}</td>
-                            <td>{{$tar->data}}</td>
-                            <td>{{$tag->descricao}}</td>
-                        </tr>
-                        @endforeach
-                    
-                    </tbody>
-                </table>
-            </section>
+           @include('lista_tarefas')
         </div>
     <!--
         <section class="opcoes row d-flex justify-content-center">
@@ -46,6 +22,33 @@
     </section>
 </div>
 @endsection
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+            x: 0,
+            y: 0,
+        },
+        methods: {
+            somar(passo, ev) {
+                console.log(passo, ev)
+                this.contador += passo
+            },
+
+            atualizaXY(event) {
+                this.x = event.clientX
+                this.y = event.clientY
+            },
+
+            exibirAlerta() {
+                alert('Estou te alertando!')
+            },
+
+        }
+    })
+</script>
 
 
 
