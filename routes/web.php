@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/tarefas', 'TarefaController@index');
+Route::get('/tarefas/lista', 'TarefaController@indexLista');
+Route::get('/tarefas/quadro', 'TarefaController@indexQuadro');
+Route::get('/tarefas/visaos', 'TarefaController@indexVisao');
+
+
 Route::get('/users', 'UserController@index');
 Route::get('/categorias', 'UserController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'TarefaController@index')->name('home');

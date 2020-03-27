@@ -1,4 +1,6 @@
+@extends('home')
 
+@section('teste')
 <section class="container col-8 lista-tarefas">
     <table class="table table-borderless table-hover table-sm">
         <thead class="thead-light">
@@ -23,3 +25,4 @@
         </tbody>
     </table>
 </section>
+@endsection

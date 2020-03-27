@@ -122,4 +122,21 @@ class TarefaController extends Controller
         $this->objTarefa->destroy('$id');
         return redirect('tarefas');
     }
+
+    /*********  MEUS MÉTODOS **************/
+
+    public function indexLista(){
+        $tarefa = $this->objTarefa->all();
+        return view('lista_tarefas', compact('tarefa'));
+    }
+
+    public function indexQuadro(){
+        $tarefa = $this->objTarefa->all();
+        return view('quadros', compact('tarefa'));
+    }
+
+    public function indexVisao(){
+        $tarefa = $this->objTarefa->all();
+        return view('visao', compact('tarefa'));
+    }
 }

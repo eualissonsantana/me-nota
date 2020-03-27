@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{url('assets/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url('assets/style.css')}}">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="{{url('assets/js/script.js')}}"></script>
 </head>
 <body>
     <div id="app">
@@ -43,13 +43,13 @@
                                 
                                 <ul class="row opcoes nav nav-tabs pull-left ulist sel-list" role="tablist">
                                     <li role="presentation" class="f-item active temp">
-                                        <a href="#" role="tab">Lista</a href="#" role="tab">
+                                        <a href="{{url('tarefas/lista')}}" id="lista" onclick="menu(this.id)" role="tab">Lista</a>
                                     </li>
                                     <li role="presentation" class="f-item active">
-                                        <a href="#" role="tab">Quadro</a href="#" role="tab">
+                                        <a href="{{url('tarefas/quadro')}}" id="quadro" onclick="menu(this.id)" role="tab">Quadro</a >
                                     </li>
                                     <li role="presentation" class="f-item active">
-                                        <a href="#" role="tab">Visão geral</a href="#" role="tab">
+                                        <a href="{{url('tarefas/visao')}}" id="visao" onclick="menu(this.id)" role="tab">Visão geral</a>
                                     </li>
                                 </ul>
                             </section>
