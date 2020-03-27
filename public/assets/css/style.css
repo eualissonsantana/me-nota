@@ -1,0 +1,74 @@
+.navbar {
+    padding-bottom: 0;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.title-quadro {
+    margin-bottom: 10px;
+}
+
+.opcoes li {
+    text-align: center;
+    padding: 2px 10px 10px;
+    margin: 0 2px 0;
+}
+
+.left-side ul {
+    border-bottom: none;
+}
+
+
+
+.opcoes a {
+    color: #464545;
+}
+
+.opcoes a:link {
+    text-decoration:none;
+}
+
+.barra-top {
+    margin-bottom: 0;
+}
+
+
+/************ quadros.blade.php *************/
+
+.card {
+    width: 340px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    vertical-align: middle;
+}
+
+.top-card {
+    padding: 0 8px 0 16px;
+    height: 56px;
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 4px 4px 0 0;
+   
+}
+
+.title h5 {
+    font-size: 16px;
+    color: #7e7e7e;
+    margin: 16px 0 0 5px;
+}
+
+.task-content {
+    box-shadow: 1px 0px 2px 1px rgba(118,118,118,0.1);
+    background-color: #f8f8f8;
+    border: 1px solid #ededed;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+    padding: 8px 10px 64px 10px;
+    max-height: 100%;
+    height: 300px;
+}
+
+.top-card img{
+    width: 28px;
+    height: 28px;
+    margin: 12px 0 0 10px;
+}

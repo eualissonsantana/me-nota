@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{url('assets/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{url('assets/style.css')}}">
+    <link rel="stylesheet" href="{{url('assets/css/style.css')}}">
     <script src="{{url('assets/js/script.js')}}"></script>
 </head>
 <body>
