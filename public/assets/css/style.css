@@ -17,8 +17,6 @@
     border-bottom: none;
 }
 
-
-
 .opcoes a {
     color: #464545;
 }
@@ -34,7 +32,7 @@
 
 /************ quadros.blade.php *************/
 
-.card {
+.quadros .card {
     width: 340px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -47,7 +45,10 @@
     background-color: #fff;
     border: 1px solid #ededed;
     border-radius: 4px 4px 0 0;
-   
+}
+
+.top-card .header {
+    padding: 0 10px;
 }
 
 .title h5 {
@@ -67,8 +68,50 @@
     height: 300px;
 }
 
-.top-card img{
+.title img{
     width: 28px;
     height: 28px;
-    margin: 12px 0 0 10px;
+    margin-top: 12px;
 }
+
+.options img {
+    margin: 17px 0 0 15px
+}
+
+#add-img {
+    width: 18px;
+}
+
+#dots-img {
+    margin-top: 19px;
+    width: 14px;
+}
+
+.task-card-row {
+    min-height: 85px;
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    padding: 12px 8px 6px 8px;
+}
+
+.task-content ul {
+    padding: 0;
+}
+
+li {
+    list-style: none; 
+}
+
+#to-do .task-card-row {
+    border-color: #1bb1cc;
+}
+
+#doing .task-card-row {
+    border-color: #e78a21;
+}
+
+#done .task-card-row {
+    border-color: #41c57f;
+}
+
