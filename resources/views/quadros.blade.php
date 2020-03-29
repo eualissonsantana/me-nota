@@ -17,9 +17,18 @@
         </section>
         <section class="task-content">
             <ul>
+                @foreach($tarefa as $tar)
+                @php
+                    $tag = $tar->find($tar->id)->relCategoria;
+                @endphp
                 <li class="task-card-row clearfix">
-                   
+                   <h6>{{$tar->titulo}}</h6>
+                   <article class="container row">
+                       <h6>{{$tar->data}}</h6>
+                       <h6>{{$tag->descricao}}</h6>
+                   </article>
                 </li>
+                @endforeach
             </ul>
         </section>
     </section>

@@ -1,13 +1,14 @@
 @extends('home')
 
 @section('tarefas')
-<section class="container col-8 lista-tarefas">
+<section class="container col-10 lista-tarefas">
     <table class="table table-borderless table-hover table-sm">
         <thead class="thead-light">
             <tr>
-                <th scope="col">tarefa</th>
-                <th scope="col">data</th>
-                <th scope="col">tag</th>
+                <th scope="col" width="5%"></th>
+                <th scope="col" width="75%">tarefa</th>
+                <th scope="col" width="10%">data</th>
+                <th scope="col" width="10%">tag</th>
             </tr>
         </thead>
         <tbody>
@@ -15,8 +16,9 @@
             @php
                 $tag = $tar->find($tar->id)->relCategoria;
             @endphp
-            <tr>
-                <td>{{$tar->titulo}}</td>
+            <tr id="row-task">
+                <td><img src="\assets\img\doing-circle.png"></td>
+                <td >{{$tar->titulo}}</td>
                 <td>{{$tar->data}}</td>
                 <td>{{$tag->descricao}}</td>
             </tr>

@@ -19,6 +19,7 @@ class CreateModelTarefasTable extends Migration
             $table->string('descricao');
             $table->enum('situacao',['to_do', 'doing', 'done']);
             $table->date('data');
+            $table->enum('prioridade', ['baixa', 'media', 'alta', 'urgente']);
             $table->integer('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('id_categoria')->unsigned();

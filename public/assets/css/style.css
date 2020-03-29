@@ -1,3 +1,7 @@
+h6 {
+    font-size: 13px;
+}
+
 .navbar {
     padding-bottom: 0;
     border-bottom: 1px solid rgb(219, 219, 219);
@@ -16,6 +20,22 @@
 .left-side ul {
     border-bottom: none;
 }
+
+.opcoes li:hover {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid rgb(194, 194, 194);
+    border: 0.5px solid rgb(194, 194, 194);
+    border-width: thin;
+    border-bottom: #ffffff solid 2px;
+}
+
+.opcoes a:hover {
+    border-bottom: 3px solid rgb(6, 209, 6);
+    padding-bottom: 10px;
+    padding-bottom: 6px;
+}
+    
 
 .opcoes a {
     color: #464545;
@@ -88,11 +108,12 @@
 }
 
 .task-card-row {
-    min-height: 85px;
+    min-height: 60px;
     background-color: #fff;
     border: 1px solid #ededed;
     border-radius: 4px;
     padding: 12px 8px 6px 8px;
+    margin-bottom: 10px;
 }
 
 .task-content ul {
@@ -115,3 +136,8 @@ li {
     border-color: #41c57f;
 }
 
+/*********** lista.blade.php ********/
+
+#row-task img{
+    width: 22px;
+}
