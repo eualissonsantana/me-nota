@@ -7,6 +7,17 @@ h6 {
     border-bottom: 1px solid rgb(219, 219, 219);
 }
 
+.nav-item img{
+    width: 19px;
+}
+
+#perfil-row {
+    height: 20px;
+    width: 1px;
+    background-color: #a2a2a2;
+    margin: 12px 5px 0 0; 
+}
+
 .title-quadro {
     margin-bottom: 10px;
 }
@@ -41,8 +52,12 @@ h6 {
     color: #464545;
 }
 
-.opcoes a:link {
+a:link {
     text-decoration:none;
+}
+
+a {
+    color: inherit;
 }
 
 .barra-top {
@@ -135,6 +150,29 @@ li {
 #done .task-card-row {
     border-color: #41c57f;
 }
+
+#priority {
+    padding: 0;
+}
+
+.bottom-options {
+    align-items: flex-end;
+}
+
+#categoria {
+    background-color: #60105f;
+    border-radius: 4px;
+    color: #ffffff;
+    margin-left: 8px;
+    padding: 3px 5px 1px 5px ;
+}
+
+#task-id {
+    color: #a2a2a2;
+    margin-left: 6px;
+}
+
+
 
 /*********** lista.blade.php ********/
 

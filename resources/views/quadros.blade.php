@@ -1,7 +1,7 @@
 @extends('home')
 
 @section('tarefas')
-<section class="col-10 row d-flex justify-content-between quadros">
+<section class="col-xl-9 col-10 row d-flex justify-content-between quadros">
     <section class="card shadow-sm " id="to-do">
         <section class="top-card">
            <article class="row d-flex justify-content-between header">
@@ -21,13 +21,31 @@
                 @php
                     $tag = $tar->find($tar->id)->relCategoria;
                 @endphp
-                <li class="task-card-row clearfix">
-                   <h6>{{$tar->titulo}}</h6>
-                   <article class="container row">
-                       <h6>{{$tar->data}}</h6>
-                       <h6>{{$tag->descricao}}</h6>
-                   </article>
-                </li>
+                <a href="#">
+                    <li class="task-card-row">
+                        <section class="container row task-informations">
+                            <article class="col-1" id="priority">
+                                <h6>NA</h6>
+                            </article>
+                            <section class="col-11 container main-informations">
+                                <div id="col-12 task-title">
+                                    <h6>{{$tar->titulo}}</h6>
+                                </div>
+                                <article class="container row bottom-options">        
+                                    <div id="data">
+                                        <h6>{{$tar->data}}</h6> 
+                                    </div>
+                                    <div id="categoria">
+                                        <h6>{{$tag->descricao}}</h6> 
+                                    </div>
+                                    <div>
+                                        <h6 id="task-id">#{{$tar->id}}</h6> 
+                                    </div>
+                                </article>
+                            </section>
+                        </section>
+                    </li>
+                </a>
                 @endforeach
             </ul>
         </section>
@@ -50,9 +68,36 @@
         </section>
         <section class="task-content">
             <ul>
-                <li class="task-card-row clearfix">
-                   
-                </li>
+                @foreach($tarefa as $tar)
+                @php
+                    $tag = $tar->find($tar->id)->relCategoria;
+                @endphp
+                <a href="#">
+                    <li class="task-card-row">
+                        <section class="container row task-informations">
+                            <article class="col-1" id="priority">
+                                <h6>NA</h6>
+                            </article>
+                            <section class="col-11 container main-informations">
+                                <div id="col-12 task-title">
+                                    <h6>{{$tar->titulo}}</h6>
+                                </div>
+                                <article class="container row bottom-options">        
+                                    <div id="data">
+                                        <h6>{{$tar->data}}</h6> 
+                                    </div>
+                                    <div id="categoria">
+                                        <h6>{{$tag->descricao}}</h6> 
+                                    </div>
+                                    <div>
+                                        <h6 id="task-id">#{{$tar->id}}</h6> 
+                                    </div>
+                                </article>
+                            </section>
+                        </section>
+                    </li>
+                </a>
+                @endforeach
             </ul>
         </section>
     </section>
@@ -72,15 +117,38 @@
         </section>
         <section class="task-content">
             <ul>
-                <li class="task-card-row clearfix">
-                   
-                </li>
+                @foreach($tarefa as $tar)
+                @php
+                    $tag = $tar->find($tar->id)->relCategoria;
+                @endphp
+                <a href="#">
+                    <li class="task-card-row">
+                        <section class="container row task-informations">
+                            <article class="col-1" id="priority">
+                                <h6>NA</h6>
+                            </article>
+                            <section class="col-11 container main-informations">
+                                <div id="col-12 task-title">
+                                    <h6>{{$tar->titulo}}</h6>
+                                </div>
+                                <article class="container row bottom-options">        
+                                    <div id="data">
+                                        <h6>{{$tar->data}}</h6> 
+                                    </div>
+                                    <div id="categoria">
+                                        <h6>{{$tag->descricao}}</h6> 
+                                    </div>
+                                    <div>
+                                        <h6 id="task-id">#{{$tar->id}}</h6> 
+                                    </div>
+                                </article>
+                            </section>
+                        </section>
+                    </li>
+                </a>    
+                @endforeach
             </ul>
         </section>
     </section>
-
-
-
-  
 </section>
 @endsection
