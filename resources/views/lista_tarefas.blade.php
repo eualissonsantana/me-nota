@@ -23,8 +23,21 @@
                 <td>{{$tag->descricao}}</td>
             </tr>
             @endforeach
-           
         </tbody>
     </table>
+
+    <div id="sidebar">
+        <div onclick="toggleSidebar()" class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>teste</li>
+            <li>Eu</li>
+            <li>Tu</li>
+        </ul>
+    </div>
+
 </section>
 @endsection
