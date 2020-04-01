@@ -3,9 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ModelProjeto;
 
 class ProjetoController extends Controller
 {
+
+    private $objProjeto;
+
+    public function __construct(){
+        $this->objProjeto = new Projeto();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +21,8 @@ class ProjetoController extends Controller
      */
     public function index()
     {
-        //
+        $projeto = $this->objProjeto->all();
+        return view('home', compact('projeto'));
     }
 
     /**
@@ -34,7 +43,13 @@ class ProjetoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $cad = $this->objProjeto->create([
+            'titulo'=>$request->titulo,
+            'id_user'=>$request->id_user
+        ]);
+        if($cad){
+            return redirect('projetos');
+        }
     }
 
     /**
@@ -45,7 +60,8 @@ class ProjetoController extends Controller
      */
     public function show($id)
     {
-        //
+        $projeto = $this->objProjeto->find($id);
+        return view('exibe_projeto', compact('projeto'));
     }
 
     /**
@@ -56,7 +72,8 @@ class ProjetoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $projeto = $this->objProjeto->find('$id');
+        return view('cria_projeto', compact('projeto'));
     }
 
     /**
@@ -68,7 +85,11 @@ class ProjetoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->objProjeto->where(['id'=>$id])->update([
+            'titulo'=>$request->titulo,
+            'id_user'=>$request->id_user
+        ]);
+        return redirect('projetos');
     }
 
     /**
@@ -79,6 +100,7 @@ class ProjetoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->objProjeto->destroy('$id');
+        return redirect('projetos');
     }
 }

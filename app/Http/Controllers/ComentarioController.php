@@ -3,9 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ModelComentario;
 
 class ComentarioController extends Controller
 {
+
+    private $objComentario;
+
+    public function __construct(){
+        $this->objComentario = new Comentario();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +21,8 @@ class ComentarioController extends Controller
      */
     public function index()
     {
-        //
+        $comentario = $this->objComentario->all();
+        return $comentario;
     }
 
     /**
@@ -23,7 +32,7 @@ class ComentarioController extends Controller
      */
     public function create()
     {
-        //
+        return view('cria_comentario');
     }
 
     /**
@@ -34,7 +43,13 @@ class ComentarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cad = $this->objTarefa->create([
+            'descricao'=>$request->descricao,
+            'id_tarefa'=>$request->id_tarefa
+        ]);
+        if($cad){
+            return redirect('comentarios');
+        }
     }
 
     /**
@@ -45,7 +60,8 @@ class ComentarioController extends Controller
      */
     public function show($id)
     {
-        //
+        $comentario = $this->objComentario->find($id);
+        return view('exibe_comentario', compact('comentario'));
     }
 
     /**
@@ -56,7 +72,8 @@ class ComentarioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comentario = $this->objComentario->find('$id');
+        return view('cria_comentario', compact('tarefa'));
     }
 
     /**
@@ -68,7 +85,11 @@ class ComentarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->objTarefa->where(['id'=>$id])->update([
+            'descricao'=>$request->descricao,
+            'id_tarefa'=>$request->id_tarefa
+        ]);
+        return redirect('comentarios');
     }
 
     /**
@@ -79,6 +100,7 @@ class ComentarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->objComentario->destroy('$id');
+        return redirect('comentarios');
     }
 }
