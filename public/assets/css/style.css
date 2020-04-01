@@ -2,6 +2,10 @@ h6 {
     font-size: 13px;
 }
 
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .navbar {
     padding-bottom: 0;
     border-bottom: 1px solid rgb(219, 219, 219);
@@ -87,9 +91,10 @@ a {
 }
 
 .title h5 {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     color: #7e7e7e;
-    margin: 16px 0 0 5px;
+    margin: 15px 0 0 5px;
 }
 
 .task-content {
@@ -139,6 +144,8 @@ li {
     list-style: none; 
 }
 
+/* ALTERAÇÃO NAS CORES DOS QUADROS DE TAREFA
+
 #to-do .task-card-row {
     border-color: #1bb1cc;
 }
@@ -150,6 +157,8 @@ li {
 #done .task-card-row {
     border-color: #41c57f;
 }
+
+*/
 
 #priority {
     padding: 0;
@@ -164,7 +173,7 @@ li {
     border-radius: 4px;
     color: #ffffff;
     margin-left: 8px;
-    padding: 3px 5px 1px 5px ;
+    padding: 3px 5px 0 5px ;
 }
 
 #task-id {

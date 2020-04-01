@@ -21,14 +21,11 @@
                 @php
                     $tag = $tar->find($tar->id)->relCategoria;
                 @endphp
-                <a href="#">
-                    <li class="task-card-row">
-                        <section class="container row task-informations">
-                            <article class="col-1" id="priority">
-                                <h6>NA</h6>
-                            </article>
-                            <section class="col-11 container main-informations">
-                                <div id="col-12 task-title">
+                @if($tar->situacao == 'to_do')
+                    <a href="#">
+                        <li class="task-card-row">
+                            <section class="main-informations">
+                                <div id="task-title">
                                     <h6>{{$tar->titulo}}</h6>
                                 </div>
                                 <article class="container row bottom-options">        
@@ -43,9 +40,9 @@
                                     </div>
                                 </article>
                             </section>
-                        </section>
-                    </li>
-                </a>
+                        </li>
+                    </a>
+                @endif
                 @endforeach
             </ul>
         </section>
@@ -72,14 +69,11 @@
                 @php
                     $tag = $tar->find($tar->id)->relCategoria;
                 @endphp
-                <a href="#">
-                    <li class="task-card-row">
-                        <section class="container row task-informations">
-                            <article class="col-1" id="priority">
-                                <h6>NA</h6>
-                            </article>
-                            <section class="col-11 container main-informations">
-                                <div id="col-12 task-title">
+                @if($tar->situacao == 'doing')
+                    <a href="#">
+                        <li class="task-card-row">
+                            <section class="main-informations">
+                                <div id="task-title">
                                     <h6>{{$tar->titulo}}</h6>
                                 </div>
                                 <article class="container row bottom-options">        
@@ -94,9 +88,9 @@
                                     </div>
                                 </article>
                             </section>
-                        </section>
-                    </li>
-                </a>
+                        </li>
+                    </a>
+                @endif
                 @endforeach
             </ul>
         </section>
@@ -121,14 +115,11 @@
                 @php
                     $tag = $tar->find($tar->id)->relCategoria;
                 @endphp
-                <a href="#">
-                    <li class="task-card-row">
-                        <section class="container row task-informations">
-                            <article class="col-1" id="priority">
-                                <h6>NA</h6>
-                            </article>
-                            <section class="col-11 container main-informations">
-                                <div id="col-12 task-title">
+                @if($tar->situacao == 'done')
+                    <a href="#">
+                        <li class="task-card-row">
+                            <section class="main-informations">
+                                <div id="task-title">
                                     <h6>{{$tar->titulo}}</h6>
                                 </div>
                                 <article class="container row bottom-options">        
@@ -143,9 +134,9 @@
                                     </div>
                                 </article>
                             </section>
-                        </section>
-                    </li>
-                </a>    
+                        </li>
+                    </a>
+                @endif 
                 @endforeach
             </ul>
         </section>
