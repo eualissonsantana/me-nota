@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="{{url('assets/css/style.css')}}">
     <script src="{{url('assets/js/script.js')}}"></script>
 </head>
-<body>
+<body id="top">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white barra-top">
+        <nav class="navbar navbar-expand-md navbar-light barra-top" id="topbar">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

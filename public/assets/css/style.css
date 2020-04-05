@@ -6,6 +6,12 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+#topbar {
+    background-color: #878B96;
+    color: #DCF238;
+}
+
+
 .navbar {
     padding-bottom: 0;
     border-bottom: 1px solid rgb(219, 219, 219);
@@ -72,10 +78,11 @@ a {
 /************ quadros.blade.php *************/
 
 .quadros .card {
-    width: 340px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    width: 374px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
     vertical-align: middle;
+    max-height: 100%;
 }
 
 .top-card {
@@ -83,7 +90,7 @@ a {
     height: 56px;
     background-color: #fff;
     border: 1px solid #ededed;
-    border-radius: 4px 4px 0 0;
+    border-radius: 4px '4px 0 0';
 }
 
 .top-card .header {
@@ -103,9 +110,9 @@ a {
     border: 1px solid #ededed;
     border-radius: 0 0 4px 4px;
     border-top: none;
-    padding: 8px 10px 64px 10px;
+    padding: 8px 10px 8px 10px;
     max-height: 100%;
-    height: 300px;
+    min-height: 180px;
 }
 
 .title img{
@@ -134,6 +141,10 @@ a {
     border-radius: 4px;
     padding: 12px 8px 6px 8px;
     margin-bottom: 10px;
+}
+
+.task-card-row h6 {
+    font-weight: bold;
 }
 
 .task-content ul {
