@@ -1,145 +1,92 @@
 @extends('home')
 
 @section('tarefas')
-<section class="col-xl-10 col-10 row d-flex justify-content-between quadros">
-    <section class="card shadow-sm " id="to-do">
-        <section class="top-card">
-           <article class="row d-flex justify-content-between header">
-                <article class="row col-7 title">
-                    <img src="\assets\img\circle.png">
-                    <h5>A fazer</h5>
+<section class="col-xl-10 col-11 row d-flex justify-content-init quadros">
+    <section class="card-space" id="to-do">
+        <article class="title-space">
+            <h4>Para fazer</h4>
+        </article>
+        <article class="add-card shadow-sm d-flex justify-content-center align-middle ">
+            <a src="#"><img id="add-img" src="\assets\img\add.png"></a>
+        </article>
+       
+        <ul>
+            @foreach($tarefa as $tar)
+            @php
+                $tag = $tar->find($tar->id)->relCategoria;
+            @endphp
+            @if($tar->situacao == 'to_do')
+            <li class="card shadow-sm ">
+                <span class="prioridade"></span>
+                <article class="title-card">
+                    <h5>{{$tar->titulo}}</h5>
                 </article>
-                <article class="col-5 d-flex justify-content-end options">
-                    <a href="#"><img src="\assets\img\add.png"id="add-img"></a>
-                    <a href="#"><img src="\assets\img\three-dots.png" id="dots-img"></a>
-                </article>
-           </article>
-        </section>
-        <section class="task-content">
-            <ul>
-                @foreach($tarefa as $tar)
-                @php
-                    $tag = $tar->find($tar->id)->relCategoria;
-                @endphp
-                @if($tar->situacao == 'to_do')
-                    <a href="#">
-                        <li class="task-card-row">
-                            <section class="main-informations">
-                                <div id="task-title">
-                                    <h6>{{$tar->titulo}}</h6>
-                                </div>
-                                <article class="container row bottom-options">        
-                                    <div id="data">
-                                        <h6>{{$tar->data}}</h6> 
-                                    </div>
-                                    <div id="categoria">
-                                        <h6>{{$tag->descricao}}</h6> 
-                                    </div>
-                                    <div>
-                                        <h6 id="task-id">#{{$tar->id}}</h6> 
-                                    </div>
-                                </article>
-                            </section>
-                        </li>
-                    </a>
-                @endif
-                @endforeach
-            </ul>
-        </section>
+                <section class="container row bottom-informations align-middle">
+                    <span class="foto"></span>
+                    <h6 class="data">{{$tar->data}}</h6>
+                </section>
+            </li>
+            @endif
+            @endforeach
+        </ul>
     </section>
 
-
-    <section class="card shadow-sm" id="doing">
-        <section class="top-card  ">
-            <article class="row d-flex justify-content-between header">
-                <article class="row col-7 title">
-                    <img src="\assets\img\doing-circle.png">
-                    <h5>Em progresso</h5>
+    <section class="card-space" id="to-do">
+        <article class="title-space">
+            <h4>Em processo</h4>
+        </article>
+        <article class="add-card shadow-sm d-flex justify-content-center align-middle ">
+            <a src="#"><img id="add-img" src="\assets\img\add.png"></a>
+        </article>
+       
+        <ul>
+            @foreach($tarefa as $tar)
+            @php
+                $tag = $tar->find($tar->id)->relCategoria;
+            @endphp
+            @if($tar->situacao == 'doing')
+            <li class="card shadow-sm ">
+                <span class="prioridade"></span>
+                <article class="title-card">
+                    <h5>{{$tar->titulo}}</h5>
                 </article>
-                <article class="col-5 d-flex justify-content-end options">
-                    <a href="#"><img src="\assets\img\add.png" id="add-img"></a>
-                    <a href="#"><img src="\assets\img\three-dots.png" id="dots-img"></a>
-                </article>
-           </article>
-           
-        </section>
-        <section class="task-content">
-            <ul>
-                @foreach($tarefa as $tar)
-                @php
-                    $tag = $tar->find($tar->id)->relCategoria;
-                @endphp
-                @if($tar->situacao == 'doing')
-                    <a href="#">
-                        <li class="task-card-row">
-                            <section class="main-informations">
-                                <div id="task-title">
-                                    <h6>{{$tar->titulo}}</h6>
-                                </div>
-                                <article class="container row bottom-options">        
-                                    <div id="data">
-                                        <h6>{{$tar->data}}</h6> 
-                                    </div>
-                                    <div id="categoria">
-                                        <h6>{{$tag->descricao}}</h6> 
-                                    </div>
-                                    <div>
-                                        <h6 id="task-id">#{{$tar->id}}</h6> 
-                                    </div>
-                                </article>
-                            </section>
-                        </li>
-                    </a>
-                @endif
-                @endforeach
-            </ul>
-        </section>
+                <section class="container row bottom-informations align-middle">
+                    <span class="foto"></span>
+                    <h6 class="data">{{$tar->data}}</h6>
+                </section>
+            </li>
+            @endif
+            @endforeach
+        </ul>
     </section>
 
-    <section class="card shadow-sm" id="done">
-        <section class="top-card ">
-            <article class="row d-flex justify-content-between header">
-                <article class="row col-7 title">
-                    <img src="\assets\img\filled-circle.png">
-                    <h5>Concluída</h5>
+    <section class="card-space" id="to-do">
+        <article class="title-space">
+            <h4>Concluídos</h4>
+        </article>
+        <article class="add-card shadow-sm d-flex justify-content-center align-middle ">
+            <a src="#"><img id="add-img" src="\assets\img\add.png"></a>
+        </article>
+       
+        <ul>
+            @foreach($tarefa as $tar)
+            @php
+                $tag = $tar->find($tar->id)->relCategoria;
+            @endphp
+            @if($tar->situacao == 'done')
+            <li class="card shadow-sm ">
+                <span class="prioridade"></span>
+                <article class="title-card">
+                    <h5>{{$tar->titulo}}</h5>
                 </article>
-                <article class="col-5 d-flex justify-content-end options">
-                    <a href="#"><img src="\assets\img\add.png" id="add-img"></a>
-                    <a href="#"><img src="\assets\img\three-dots.png" id="dots-img"></a>
-                </article>
-            </article>
-        </section>
-        <section class="task-content">
-            <ul>
-                @foreach($tarefa as $tar)
-                @php
-                    $tag = $tar->find($tar->id)->relCategoria;
-                @endphp
-                @if($tar->situacao == 'done')
-                    <a href="#">
-                        <li class="task-card-row">
-                            <section class="main-informations">
-                                <div id="task-title">
-                                    <h6>{{$tar->titulo}}</h6>
-                                </div>
-                                <article class="container row bottom-options">        
-                                    <div id="data">
-                                        <h6>{{$tar->data}}</h6> 
-                                    </div>
-                                    <div id="categoria">
-                                        <h6>{{$tag->descricao}}</h6> 
-                                    </div>
-                                    <div>
-                                        <h6 id="task-id">#{{$tar->id}}</h6> 
-                                    </div>
-                                </article>
-                            </section>
-                        </li>
-                    </a>
-                @endif 
-                @endforeach
-            </ul>
-        </section>
+                <section class="container row bottom-informations align-middle">
+                    <span class="foto"></span>
+                    <h6 class="data">{{$tar->data}}</h6>
+                </section>
+            </li>
+            @endif
+            @endforeach
+        </ul>
     </section>
 </section>
 @endsection

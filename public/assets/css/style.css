@@ -4,17 +4,20 @@ h6 {
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    background-color: #edf1f2;
 }
 
-#topbar {
-    background-color: #878B96;
-    color: #DCF238;
-}
-
+/******* HEADER ********/
 
 .navbar {
     padding-bottom: 0;
     border-bottom: 1px solid rgb(219, 219, 219);
+    background-color: #fff;
+}
+
+.teste-logo {
+    width: 40px;
+    margin: 0;
 }
 
 .nav-item img{
@@ -24,42 +27,21 @@ body {
 #perfil-row {
     height: 20px;
     width: 1px;
-    background-color: #a2a2a2;
     margin: 12px 5px 0 0; 
-}
-
-.title-quadro {
-    margin-bottom: 10px;
 }
 
 .opcoes li {
     text-align: center;
-    padding: 2px 10px 10px;
-    margin: 0 2px 0;
+    margin: 4px 15px 14px 0;
+    padding-left: 4px;
 }
 
 .left-side ul {
     border-bottom: none;
 }
 
-.opcoes li:hover {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border: 1px solid rgb(194, 194, 194);
-    border: 0.5px solid rgb(194, 194, 194);
-    border-width: thin;
-    border-bottom: #ffffff solid 2px;
-}
-
-.opcoes a:hover {
-    border-bottom: 3px solid rgb(6, 209, 6);
-    padding-bottom: 10px;
-    padding-bottom: 6px;
-}
-    
-
 .opcoes a {
-    color: #464545;
+    color: #828282;
 }
 
 a:link {
@@ -70,35 +52,79 @@ a {
     color: inherit;
 }
 
-.barra-top {
-    margin-bottom: 0;
+.opcoes a:hover {
+    color: #2c2c2c;
+}
+
+.opcoes .active a {
+    color: #FF4858;
+    border-bottom: #FF4858 2px solid;
+    padding-bottom: 16px;
+}
+
+/**************** BODY ***************/
+
+.py-4 {
+    min-height: 100%;
 }
 
 
 /************ quadros.blade.php *************/
 
+.card-space {
+    margin-right: 20px;
+}
+
 .quadros .card {
-    width: 374px;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    vertical-align: middle;
     max-height: 100%;
+    width: 374px;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
-.top-card {
-    padding: 0 8px 0 16px;
-    height: 56px;
+.quadros .add-card {
+    width: 374px;
+    height: 40px;
     background-color: #fff;
-    border: 1px solid #ededed;
-    border-radius: 4px '4px 0 0';
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
-.top-card .header {
-    padding: 0 10px;
+.quadros ul {
+    padding: 0;
 }
 
-.title h5 {
-    font-size: 18px;
+#add-img {
+    width: 20px;
+    margin-top: 10px;
+}
+
+.prioridade {
+    background-color: #FF4858;
+    width: 45px;
+    height: 6px;
+    border-radius: 15px;
+}
+
+.bottom-informations {
+    margin-top: 8px;
+}
+
+.foto {
+    background-color: #FF4858;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-left: 4px;
+    margin-right: 10px;
+}
+
+.data {
+    margin-top: 8px;
+}
+
+.title-card h5{
+    font-size: 16px;
     font-weight: bold;
     color: #7e7e7e;
     margin: 15px 0 0 5px;
@@ -125,9 +151,6 @@ a {
     margin: 17px 0 0 15px
 }
 
-#add-img {
-    width: 18px;
-}
 
 #dots-img {
     margin-top: 19px;

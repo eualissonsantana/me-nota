@@ -14,8 +14,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,700&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{url('assets/bootstrap/css/bootstrap.min.css')}}">
@@ -36,22 +35,39 @@
                         @guest
 
                         @else
-                            <section class="left-side ">
-                                <section class="row title-quadro">
-                                    <h4>Quadro de tarefas</h4>
-                                </section>
+                            <section class="left-side row">
                                 
-                                <ul class="row opcoes nav nav-tabs pull-left ulist sel-list" role="tablist">
-                                    <li role="presentation" class="f-item active temp">
-                                        <a href="{{url('tarefas/lista')}}" id="lista" onclick="menu(this.id)" role="tab">Lista</a>
-                                    </li>
-                                    <li role="presentation" class="f-item active">
-                                        <a href="{{url('tarefas/quadro')}}" id="quadro" onclick="menu(this.id)" role="tab">Quadro</a >
-                                    </li>
-                                    <li role="presentation" class="f-item active">
-                                        <a href="{{url('tarefas/visao')}}" id="visao" onclick="menu(this.id)" role="tab">Visão geral</a>
-                                    </li>
-                                </ul>
+                                <section class="teste-logo col-2">
+                                    <div>
+                                        <h2>LE</h2>
+                                    </div>
+                                </section>
+                                <section class="row col-10">
+                                    <section class="row title-quadro">
+                                        <h3>Quadro de tarefas</h3>
+                                    </section>
+                                    
+                                    <ul class="row opcoes nav nav-tabs pull-left ulist sel-list" role="tablist">
+                                        <li role="presentation" class="f-item ">
+                                            <a href="{{url('tarefas/lista')}}" id="lista" onclick="isActive(this.id)" role="tab">Lista</a>
+                                        </li>
+                                        <li role="presentation" class="f-item active">
+                                            <a href="{{url('tarefas/quadro')}}" id="quadro" onclick="isActive(this.id)" role="tab">Quadro</a >
+                                        </li>
+                                        <li role="presentation" class="f-item">
+                                            <a href="{{url('tarefas/visao')}}" id="visao" onclick="isActive(this.id)" role="tab">Visão geral</a>
+                                        </li>
+                                        <li role="presentation" class="f-item">
+                                            <a href="{{url('tarefas/visao')}}" id="visao" onclick="isActive(this.id)" role="tab">Cronograma</a>
+                                        </li>
+                                        <li role="presentation" class="f-item">
+                                            <a href="{{url('tarefas/visao')}}" id="visao" onclick="isActive(this.id)" role="tab">Calendário</a>
+                                        </li>
+                                        <li role="presentation" class="f-item">
+                                            <a href="{{url('tarefas/visao')}}" id="visao" onclick="isActive(this.id)" role="tab">Progresso</a>
+                                        </li>
+                                    </ul>
+                                </section>
                             </section>
                         @endguest
 

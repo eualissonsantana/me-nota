@@ -1,3 +1,3 @@
-function toggleSidebar() {
-    document.getElementById("sidebar").classList.btn('active');
+function isActive(id) {
+    document.getElementById(id).classList.add("active")
 }
