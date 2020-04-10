@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid content-home">
     <section class="container-fluid box-geral">
         
         <div class="card-body">
@@ -12,7 +12,7 @@
             @endif
         </div>
         
-       <div class=" d-flex justify-content-init ">
+       <div class="d-flex justify-content-init ">
             @yield('tarefas')
        </div>
         

@@ -7,6 +7,8 @@ use App\Providers\RouteServiceProvider;
 use App\Models\ModelTarefa;
 use App\Models\ModelCategoria;
 use App\User;
+use Carbon\Carbon;
+setlocale (LC_TIME, 'pt_BR');
 
 class TarefaController extends Controller
 {
@@ -138,5 +140,12 @@ class TarefaController extends Controller
     public function indexVisao(){
         $tarefa = $this->objTarefa->all();
         return view('visao', compact('tarefa'));
+    }
+
+    public static function getDate($id){
+        $dataTarefa = $objTarefa->find($id)->$data;
+        $dataTarefa = new Carbon();
+        $dataTarefa->format('d \\d\\e F');
+        return $dataTarefa;
     }
 }

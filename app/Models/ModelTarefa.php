@@ -25,5 +25,4 @@ class ModelTarefa extends Model
     public function relComentario(){
         return $this->hasMany('App\Models\ModelComentario', 'id_tarefa');
     }
-
 }

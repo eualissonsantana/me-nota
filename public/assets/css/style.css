@@ -4,7 +4,11 @@ h6 {
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background-color: #edf1f2;
+    height: 100vh;
+}
+
+#app {
+    height: 100%;
 }
 
 /******* HEADER ********/
@@ -64,15 +68,36 @@ a {
 
 /**************** BODY ***************/
 
-.py-4 {
-    min-height: 100%;
+.main {
+    padding: 0;
+    background-color: #edf1f2;
 }
+
+/*************** HOME ****************/
+
+.box-geral, .content-home {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 
 
 /************ quadros.blade.php *************/
 
 .card-space {
     margin-right: 20px;
+}
+
+.quadros {
+    padding: 25px;
+    margin-left: 5px;
+    background-color: #edf1f2;
+    height: 100vh;
+}
+
+.card-body {
+    padding: 0;
 }
 
 .quadros .card {
@@ -151,7 +176,6 @@ a {
     margin: 17px 0 0 15px
 }
 
-
 #dots-img {
     margin-top: 19px;
     width: 14px;
@@ -218,6 +242,16 @@ li {
 
 
 /*********** lista.blade.php ********/
+
+.lista-tarefas {
+    background-color: #fff;
+    padding: 25px;
+}
+
+.table {
+    margin: 10px;
+    width: 96%;
+}
 
 #row-task img{
     width: 22px;

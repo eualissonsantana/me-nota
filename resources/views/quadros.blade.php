@@ -1,7 +1,7 @@
 @extends('home')
 
 @section('tarefas')
-<section class="col-xl-10 col-11 row d-flex justify-content-init quadros">
+<section class="col-xl-10 col-10 row d-flex justify-content-init quadros">
     <section class="card-space" id="to-do">
         <article class="title-space">
             <h4>Para fazer</h4>
