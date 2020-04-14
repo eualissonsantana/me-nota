@@ -282,3 +282,53 @@ li {
     background: black;
     margin: 5px 0;
 }
+
+#span-baixa{
+    border-radius: 20px;
+    background-color: rgb(35, 139, 223);
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 80px;
+    text-align: center;
+}
+
+#span-media{
+    border-radius: 20px;
+    background-color: #4CAF50;
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 80px;
+    text-align: center;
+}
+
+#span-alta{
+    border-radius: 20px;
+    background-color: rgb(216, 131, 34);
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 80px;
+    text-align: center;
+}
+
+#span-urgente{
+    border-radius: 20px;
+    background-color: rgb(184, 49, 54);
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 80px;
+    text-align: center;
+}
+
+#span-categoria {
+    border-radius: 20px;
+    background-color: #FF4858;
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 100px;
+    text-align: center;
+}

@@ -4,7 +4,7 @@
     setlocale (LC_TIME, 'pt_BR');
 @endphp
 @section('tarefas')
-<section onload="active(this.class)" class="container-fluid lista-tarefas">
+<section class="container-fluid lista-tarefas">
     <table class="table table-bordered table-hover ">
         <thead class="thead-light">
             <tr>
@@ -16,7 +16,7 @@
                 <th scope="col" width="10%">tag</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody >
             @foreach($tarefa as $tar)
             @php
                 $tag = $tar->find($tar->id)->relCategoria;
@@ -25,10 +25,10 @@
             <tr id="row-task">
                 <td><img src="\assets\img\doing-circle.png"></td>
                 <td>{{$tar->titulo}}</td>
-                <td >{{$user->name}}</td>
+                <td>{{$user->name}}</td>
                 <td>{{ \Carbon\Carbon::parse($tar->data)->format('D, d \\d\\e F')}}</td>
-                <td>{{$tar->prioridade}}</td>
-                <td>{{$tag->descricao}}</td>
+                <td class="justify-content-center"><div class="span-prioridade" id="span-cor">{{$tar->prioridade}}</div></td>
+                <td class="justify-content-center"><div id="span-categoria">{{$tag->descricao}}</div></td>
             </tr>
             @endforeach
         </tbody>

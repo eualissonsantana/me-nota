@@ -14,3 +14,19 @@ function active(classe) {
         document.getElementById('li-lista').classList.add('active')
     }
 }
+
+function corPrioridade() {
+    var el = document.getElementsByClassName('span-prioridade')
+
+    for (let i in el) {
+        if (el[i].textContent === 'baixa') {
+            el[i].setAttribute('id', 'span-baixa')
+        } else if (el[i].textContent === 'media') {
+            el[i].setAttribute('id', 'span-media')
+        } else if (el[i].textContent === 'alta') {
+            el[i].setAttribute('id', 'span-alta')
+        } else if (el[i].textContent === 'urgente') {
+            el[i].setAttribute('id', 'span-urgente')
+        }
+    }
+}

@@ -10,18 +10,17 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+   <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,700&display=swap" rel="stylesheet">
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{url('assets/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url('assets/css/style.css')}}">
     <script src="{{url('assets/js/script.js')}}"></script>
 </head>
-<body id="top">
+<body id="top" onload="corPrioridade()">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light barra-top" id="topbar">
             <div class="container-fluid">
