@@ -10,7 +10,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-   <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
+    <script src="{{url('assets/js/app.js')}}" defer></script>
+    <script src="{{url('assets/js/script.js')}}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,9 +19,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{url('assets/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url('assets/css/style.css')}}">
-    <script src="{{url('assets/js/script.js')}}"></script>
 </head>
-<body id="top" onload="corPrioridade()">
+<body id="top" onload="startPage()">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light barra-top" id="topbar">
             <div class="container-fluid">
@@ -36,18 +36,18 @@
                         @else
                             <section class="left-side row">
                                 
-                                <section class="teste-logo col-2">
+                                <section class="teste-logo">
                                     <div>
                                         <h2>LE</h2>
                                     </div>
                                 </section>
-                                <section class="row col-10">
+                                <section class="titulo-projeto">
                                     <section class="row title-quadro">
-                                        <h3>Quadro de tarefas</h3>
+                                        <h3>Projeto Me Lembra (não sei se vai ser mais)</h3>
                                     </section>
                                     
                                     <ul class="row opcoes nav nav-tabs pull-left ulist sel-list" role="tablist">
-                                        <li role="presentation" class="f-item" id="li-lista">
+                                        <li role="presentation" class="f-item active" id="li-lista">
                                             <a  href="#" id="lista" class="" onclick="isActive(this.id)" role="tab">Lista</a>
                                         </li>
                                         <li role="presentation" class="f-item " id="li-quadro">

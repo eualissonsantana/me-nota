@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 32 32"><defs><style>.cls-1{fill:#515151;}</style></defs><title>Simple Fast Icons EXT</title><path d="M16,1A15,15,0,1,0,31,16,15,15,0,0,0,16,1Zm0,28.33A13.33,13.33,0,1,1,29.33,16,13.35,13.35,0,0,1,16,29.33Z" style="fill: #515151;"/><polygon points="13.91 18.59 10.71 15.39 9.29 16.8 13.91 21.41 23.61 11.71 22.2 10.29 13.91 18.59" style="fill: #515151;"/>
+	
+	<metadata>
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			<rdf:Description about="https://iconscout.com/legal#licenses" dc:title="Done, Circle, Complete, Downloaded, Added" dc:description="Done, Circle, Complete, Downloaded, Added" dc:publisher="Iconscout" dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+				<dc:creator>
+					<rdf:Bag>
+						<rdf:li>Kirill Kazachek</rdf:li>
+					</rdf:Bag>
+				</dc:creator>
+			</rdf:Description>
+		</rdf:RDF>
+    </metadata></svg>

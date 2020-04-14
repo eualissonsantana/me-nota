@@ -21,7 +21,12 @@ body {
 
 .teste-logo {
     width: 40px;
-    margin: 0;
+    margin: 10px;
+    padding: 10px;
+}
+
+.titulo-projeto {
+    margin-left: 40px;
 }
 
 .nav-item img{
@@ -64,6 +69,7 @@ a {
     color: #FF4858;
     border-bottom: #FF4858 2px solid;
     padding-bottom: 16px;
+    font-weight: bolder;
 }
 
 /**************** BODY ***************/
@@ -240,12 +246,34 @@ li {
 }
 
 
-
 /*********** lista.blade.php ********/
+
+#titulo-lista {
+    margin: 0 0 10px 12px;
+    padding-right: 50px;
+}
 
 .lista-tarefas {
     background-color: #fff;
     padding: 25px;
+}
+
+#tilt {
+    margin-top: 5px;
+}
+
+#separa-filtro {
+    width: 2px;
+    height: 35px;
+    background-color: rgb(130, 130, 130, 0.6);
+    margin: 0 0 0 20px;
+}
+
+.btn-filtro{
+    margin-left: 15px;
+    background-color: #FF4858;
+    color: #fff;
+    width: 150px;
 }
 
 .table {
@@ -254,7 +282,13 @@ li {
 }
 
 #row-task img{
-    width: 22px;
+    width: 25px;
+    height: 25px;
+    margin: 0 15px 4px 0;
+}
+
+#row-task img:hover {
+    src: "../img/real-done.png"
 }
 
 #sidebar{
@@ -284,51 +318,75 @@ li {
 }
 
 #span-baixa{
-    border-radius: 20px;
-    background-color: rgb(35, 139, 223);
-    padding: 0 10px;
-    color: #fff;
-    text-transform: capitalize;
-    width: 80px;
-    text-align: center;
-}
-
-#span-media{
-    border-radius: 20px;
-    background-color: #4CAF50;
-    padding: 0 10px;
-    color: #fff;
-    text-transform: capitalize;
-    width: 80px;
-    text-align: center;
-}
-
-#span-alta{
-    border-radius: 20px;
-    background-color: rgb(216, 131, 34);
-    padding: 0 10px;
-    color: #fff;
-    text-transform: capitalize;
-    width: 80px;
-    text-align: center;
-}
-
-#span-urgente{
-    border-radius: 20px;
-    background-color: rgb(184, 49, 54);
-    padding: 0 10px;
-    color: #fff;
-    text-transform: capitalize;
-    width: 80px;
-    text-align: center;
-}
-
-#span-categoria {
-    border-radius: 20px;
-    background-color: #FF4858;
+    border-radius: 25px;
+    background-color: #fcca00;
     padding: 0 10px;
     color: #fff;
     text-transform: capitalize;
     width: 100px;
     text-align: center;
 }
+
+#span-media{
+    border-radius: 25px;
+    background-color: #fd9c00;
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 100px;
+    text-align: center;
+    box-shadow: 1px 0px 2px 1px rgba(118,118,118,0.1);
+}
+
+#span-alta{
+    border-radius: 25px;
+    background-color: #ed354d;
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 100px;
+    text-align: center;
+    box-shadow: 1px 0px 2px 1px rgba(118,118,118,0.1);
+}
+
+#span-urgente{
+    border-radius: 25px;
+    background-color: #ed354d;
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 100px;
+    text-align: center;
+    box-shadow: 1px 0px 2px 1px rgba(118,118,118,0.1);
+}
+
+#cat1 {
+    border-radius: 20px;
+    background-color: #13C8B5;
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 120px;
+    text-align: center;
+}
+
+#cat2 {
+    border-radius: 20px;
+    background-color: #7375A5;
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 120px;
+    text-align: center;
+}
+
+#cat3 {
+    border-radius: 20px;
+    background-color: #2B364A;
+    padding: 0 10px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 120px;
+    text-align: center;
+}
+
