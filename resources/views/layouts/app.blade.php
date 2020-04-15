@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Me Nota</title>
 
     <!-- Scripts -->
     <script src="{{url('assets/js/app.js')}}" defer></script>
@@ -43,7 +43,7 @@
                                 </section>
                                 <section class="titulo-projeto">
                                     <section class="row title-quadro">
-                                        <h3>Projeto Me Lembra (não sei se vai ser mais)</h3>
+                                        <h3>Projeto Me Nota</h3>
                                     </section>
                                     
                                     <ul class="row opcoes nav nav-tabs pull-left ulist sel-list" role="tablist">

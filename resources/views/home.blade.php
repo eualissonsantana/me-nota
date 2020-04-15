@@ -12,7 +12,7 @@
             @endif
         </div>
         
-       <div class="d-flex justify-content-init ">
+       <div class="d-flex justify-content-center ">
             @yield('tarefas')
        </div>
         

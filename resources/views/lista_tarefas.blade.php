@@ -1,8 +1,4 @@
 @extends('home')
-@php
-    use Carbon\Carbon;
-    setlocale (LC_TIME, 'pt_BR');
-@endphp
 @section('tarefas')
 <section class="container-fluid lista-tarefas">
     <section class="row justify-content-start" id="titulo-lista">
@@ -19,7 +15,7 @@
             </div>
         </div>
     </section>
-    <table class="table table-bordered table-hover">
+    <table class="table table-md table-bordered table-hover">
         <thead class="">
             <tr>
                 <th scope="col" width="45%">Nome da tarefa</th>
@@ -39,7 +35,7 @@
                 <td><a class="ancora-situacao" href="#"><span class="span-situacao">{{$tar->situacao}}</span><img class="img-situacao" onmouseover="changeOn(this)" onmouseout="changeOff(this)" src="\assets\img\doing.png"></a>{{$tar->titulo}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{ \Carbon\Carbon::parse($tar->data)->format('D, d \\d\\e F')}}</td>
-                <td class="justify-content-center"><div class="span-prioridade" id="">{{$tar->prioridade}}</div></td>
+                <td class="prioridade"><div class="span-prioridade" id="">{{$tar->prioridade}}</div></td>
                 <td class="justify-content-center"><div class="span-categoria" id="">{{$tag->descricao}}</div></td>
             </tr>
             @endforeach

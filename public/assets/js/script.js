@@ -1,11 +1,12 @@
 function startPage() {
     defineSituacao();
-    definePrioridade();
+    definePrioridadeLista();
+    definePrioridadeQuadro();
     defineCategoria();
 
 }
 
-function definePrioridade() {
+function definePrioridadeLista() {
     var el = document.getElementsByClassName('span-prioridade')
 
     for (let i in el) {
@@ -15,6 +16,24 @@ function definePrioridade() {
             el[i].setAttribute('id', 'span-media')
         } else if (el[i].textContent === 'alta') {
             el[i].setAttribute('id', 'span-alta')
+        } else if (el[i].textContent === 'urgente') {
+            el[i].setAttribute('id', 'span-urgente')
+        }
+    }
+}
+
+function definePrioridadeQuadro() {
+    var el = document.getElementsByClassName('span-prioridade-quadro')
+
+    for (let i in el) {
+        if (el[i].textContent === 'baixa') {
+            el[i].setAttribute('id', 'span-quadro-baixa')
+        } else if (el[i].textContent === 'media') {
+            el[i].setAttribute('id', 'span-quadro-media')
+        } else if (el[i].textContent === 'alta') {
+            el[i].setAttribute('id', 'span-quadro-alta')
+        } else if (el[i].textContent === 'urgente') {
+            el[i].setAttribute('id', 'span-quadro-urgente')
         }
     }
 }
