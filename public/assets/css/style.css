@@ -305,15 +305,15 @@ li {
     margin-top: 5px;
 }
 
-#separa-filtro {
+#separa-btn {
     width: 2px;
     height: 35px;
     background-color: rgb(130, 130, 130, 0.6);
-    margin: 0 0 0 20px;
+    margin: 0 10px 0 15px;
 }
 
-.btn-filtro{
-    margin-left: 15px;
+.btn-quadro{
+    margin-left: 5px;
     background-color: #FF4858;
     color: #fff;
     width: 150px;

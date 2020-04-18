@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use App\Models\ModelTarefa;
 use App\Models\ModelCategoria;
 use App\User;
+use Auth;
 use Carbon\Carbon;
 setlocale (LC_TIME, 'pt_BR');
 
@@ -30,7 +31,7 @@ class TarefaController extends Controller
      */
     public function index()
     {
-        $tarefa = $this->objTarefa->all();
+        $tarefa = $this->objTarefa->where('id_user', Auth::user()->id);
         return view('home', compact('tarefa'));
     }
 
@@ -128,17 +129,17 @@ class TarefaController extends Controller
     /*********  MEUS MÉTODOS **************/
 
     public function indexLista(){
-        $tarefa = $this->objTarefa->all();
+        $tarefa = $this->objTarefa->where('id_user', Auth::user()->id);
         return view('lista_tarefas', compact('tarefa'));
     }
 
     public function indexQuadro(){
-        $tarefa = $this->objTarefa->all();
+        $tarefa = $this->objTarefa->where('id_user', Auth::user()->id);
         return view('quadros', compact('tarefa'));
     }
 
     public function indexVisao(){
-        $tarefa = $this->objTarefa->all();
+        $tarefa = $this->objTarefa->where('id_user', Auth::user()->id);
         return view('visao', compact('tarefa'));
     }
 

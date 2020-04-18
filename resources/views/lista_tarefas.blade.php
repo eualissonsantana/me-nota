@@ -1,11 +1,18 @@
 @extends('home')
 @section('tarefas')
 <section class="container-fluid lista-tarefas">
-    <section class="row justify-content-start" id="titulo-lista">
-        <h4 id="tilt">Lista de Tarefas</h4>
-        <hr id="separa-filtro">
+    <section class="row justify-content-between " id="titulo-lista">
+        <section class="container row">
+            <h4 id="tilt">Lista de Tarefas</h4>
+            <hr id="separa-btn">
+            
+            <button class="btn btn-quadro" type="button" id="adicionarQuadroButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Adicionar
+            </button>
+        </section>
+        
         <div class="dropdown">
-            <button class="btn btn-filtro dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-quadro dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Filtrar
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
