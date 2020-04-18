@@ -1,9 +1,9 @@
 function startPage() {
+    defineActive();
     defineSituacao();
     definePrioridadeLista();
     definePrioridadeQuadro();
     defineCategoria();
-
 }
 
 function definePrioridadeLista() {
@@ -92,17 +92,6 @@ function getIdCategoria(categoria, cont) {
     return null
 }
 
-function isActive(id) {
-    if (id === 'lista') {
-        window.location.href = 'lista';
-        document.getElementById('li-lista').classList.add('active')
-    } else if (id === 'quadro') {
-        document.getElementById('li-quadro').classList.add('active')
-    } else if (id === 'visao') {
-        document.getElementById('li-visao').classList.add('active')
-    }
-}
-
 function active(classe) {
     if (classe === 'lista-tarefas') {
         document.getElementById('li-lista').classList.add('active')
@@ -115,4 +104,21 @@ function changeOn(elemento) {
 
 function changeOff(elemento) {
     elemento.setAttribute("src", "/assets/img/doing.png")
+}
+
+function mostraUrl() {
+    url = window.location.href
+    alert(url)
+}
+
+function defineActive() {
+    var url = window.location.href
+
+    if (url == "http://localhost:8000/tarefas/lista") {
+        document.getElementById('li-lista').setAttribute("class", "f-item active")
+    } else if (url == "http://localhost:8000/tarefas/quadro") {
+        document.getElementById('li-quadro').setAttribute("class", "f-item active")
+    } else if (url == "http://localhost:8000/tarefas/visao") {
+        document.getElementById('li-visao').setAttribute("class", "f-item active")
+    }
 }

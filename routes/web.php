@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/tarefas', 'TarefaController@index');
 Route::get('/tarefas/lista', 'TarefaController@indexLista');
 Route::get('/tarefas/quadro', 'TarefaController@indexQuadro');
-Route::get('/tarefas/visaos', 'TarefaController@indexVisao');
+Route::get('/tarefas/visao', 'TarefaController@indexVisao');
 
 
 Route::get('/users', 'UserController@index');

@@ -47,11 +47,11 @@
                                     </section>
                                     
                                     <ul class="row opcoes nav nav-tabs pull-left ulist sel-list" role="tablist">
-                                        <li role="presentation" class="f-item active" id="li-lista">
-                                            <a  href="#" id="lista" class="" onclick="isActive(this.id)" role="tab">Lista</a>
+                                        <li role="presentation" class="f-item" id="li-lista">
+                                            <a href="{{url('tarefas/lista')}}" id="lista" role="tab">Lista</a>
                                         </li>
                                         <li role="presentation" class="f-item " id="li-quadro">
-                                            <a href="{{url('tarefas/quadro')}}" id="quadro" onclick="isActive(this.id)" role="tab">Quadro</a >
+                                            <a href="{{url('tarefas/quadro')}}" id="quadro" role="tab">Quadro</a >
                                         </li>
                                         <li role="presentation" class="f-item" id="li-visao">
                                             <a href="{{url('tarefas/visao')}}" id="visao" onclick="isActive(this.id)" role="tab">Visão geral</a>
