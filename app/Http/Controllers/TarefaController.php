@@ -129,12 +129,12 @@ class TarefaController extends Controller
     /*********  MEUS MÉTODOS **************/
 
     public function indexLista(){
-        $tarefa = $this->objTarefa->where('id_user', Auth::user()->id);
+        $tarefa = $this->objTarefa->All()->where('id_user', Auth::user()->id);
         return view('lista_tarefas', compact('tarefa'));
     }
 
     public function indexQuadro(){
-        $tarefa = $this->objTarefa->where('id_user', Auth::user()->id);
+        $tarefa = $this->objTarefa->All()->where('id_user', Auth::user()->id);
         return view('quadros', compact('tarefa'));
     }
 
