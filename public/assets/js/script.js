@@ -122,3 +122,7 @@ function defineActive() {
         document.getElementById('li-visao').setAttribute("class", "f-item active")
     }
 }
+
+function mostraTask() {
+    alert('Mostra')
+}
