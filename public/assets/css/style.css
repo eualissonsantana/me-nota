@@ -275,13 +275,6 @@ li {
     align-items: flex-end;
 }
 
-#categoria {
-    background-color: #60105f;
-    border-radius: 4px;
-    color: #ffffff;
-    margin-left: 8px;
-    padding: 3px 5px 0 5px ;
-}
 
 #task-id {
     color: #a2a2a2;
@@ -301,7 +294,7 @@ li {
     padding: 25px;
 }
 
-#tilt {
+#titulo-page {
     margin-top: 5px;
 }
 
@@ -319,45 +312,23 @@ li {
     width: 150px;
 }
 
-.table {
-    margin: 10px;
-    width: 96%;
+#tit-responsavel, #tit-prioridade, #tit-categoria, #user {
+    text-align: center;
 }
+
+#table-tarefas td {
+    padding: 8px;
+}
+
+#row-task {
+    cursor: pointer;
+}
+
 
 #row-task img{
     width: 25px;
     height: 25px;
     margin: 0 15px 4px 0;
-}
-
-#row-task img:hover {
-    src: "../img/real-done.png"
-}
-
-#sidebar{
-    position: fixed;
-    width: 200px;
-    height: 100%;
-    background: #a2a2a2;
-    left: -200px;
-}
-
-#sidebar .active {
-    left: 0px;
-}
-
-#sidebar .btn {
-    position: absolute;
-    left: 230px;
-    top: 20px;
-}
-
-#sidebar .btn span {
-    display: block;
-    width: 30px;
-    height: 5px;
-    background: black;
-    margin: 5px 0;
 }
 
 .span-prioridade {

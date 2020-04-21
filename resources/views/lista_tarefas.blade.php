@@ -22,14 +22,14 @@
             </div>
         </div>
     </section>
-    <table class="table table-md table-bordered table-hover">
+    <table class="table table-bordered table-hover" id="table-tarefas">
         <thead class="">
             <tr>
                 <th scope="col" width="45%">Nome da tarefa</th>
-                <th scope="col" width="10%">Responsável</th>
+                <th scope="col" id="tit-responsavel" width="10%">Responsável</th>
                 <th scope="col" width="20%">Data de conclusão</th>
-                <th scope="col" width="10%">Prioridade</th>
-                <th scope="col" width="10%">Categoria</th>
+                <th scope="col" id="tit-prioridade" width="10%">Prioridade</th>
+                <th scope="col" id="tit-categoria" width="10%">Categoria</th>
             </tr>
         </thead>
         <tbody >
@@ -39,11 +39,16 @@
                 $user = $tar->find($tar->id)->relUser;
             @endphp
             <tr id="row-task">
-                <td><a class="ancora-situacao" href="#"><span class="span-situacao">{{$tar->situacao}}</span><img class="img-situacao" onmouseover="changeOn(this)" onmouseout="changeOff(this)" src="\assets\img\doing.png"></a>{{$tar->titulo}}</td>
-                <td>{{$user->name}}</td>
+                <td>
+                    <a class="ancora-situacao" href="#">
+                        <span class="span-situacao">{{$tar->situacao}}</span>
+                        <img class="img-situacao" onmouseover="changeOn(this)" onmouseout="changeOff(this)" src="\assets\img\doing.png">
+                    </a>{{$tar->titulo}}
+                </td>
+                <td id="user">{{$user->name}}</td>
                 <td>{{ \Carbon\Carbon::parse($tar->data)->format('D, d \\d\\e F')}}</td>
                 <td class="prioridade"><div class="span-prioridade" id="">{{$tar->prioridade}}</div></td>
-                <td class="justify-content-center"><div class="span-categoria" id="">{{$tag->descricao}}</div></td>
+                <td ><div class="span-categoria" id="">{{$tag->descricao}}</div></td>
             </tr>
             @endforeach
         </tbody>
