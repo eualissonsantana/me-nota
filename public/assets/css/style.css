@@ -312,23 +312,57 @@ li {
     width: 150px;
 }
 
-#tit-responsavel, #tit-prioridade, #tit-categoria, #user {
+#table-tarefas {
+    margin: 20px 12px;
+    width: 96%;
+}
+
+#table-tarefas h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#tit-linha {
+    border: 1px solid rgb(163, 163, 163, 0.4);
+    border-left: none;
+    border-right: none;
+    padding: 7px 0 5px 0;
+}
+
+#tit-responsavel, #tit-prioridade, #tit-categoria, #user, #prioridade, #categoria {
+    text-align: center;
+    width: 10%;
+}
+
+#tit-tarefa, #tarefa {
+    width: 49%;
+}
+
+#tit-data, #data {
+    width: 20%;
     text-align: center;
 }
 
-#table-tarefas td {
-    padding: 8px;
-}
-
-#row-task {
+#row-task, #subtarefas {
+    border-bottom: 1px solid rgb(163, 163, 163, 0.4);
     cursor: pointer;
+    height: 40px;
+    padding: 7px 0;
 }
 
-
-#row-task img{
+#row-task img, #subtarefas img{
     width: 25px;
     height: 25px;
     margin: 0 15px 4px 0;
+}
+
+#row-task:hover, #subtarefas:hover {
+    background-color: rgb(163, 163, 163, 0.2);;
+}
+
+#subtarefas #tarefa {
+    width: 46%;
+    margin-left: 44px;
 }
 
 .span-prioridade {
