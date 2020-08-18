@@ -30,50 +30,54 @@
             <article id="tit-prioridade"><h4>Prioridade</h4></article>
             <article id="tit-categoria"><h4>Categoria</h4></article>
         </section>
-        @foreach($tarefa as $tar)
-        @php
-            $tag = $tar->find($tar->id)->relCategoria;
-            $user = $tar->find($tar->id)->relUser;
-        @endphp
-        @if($tar->id_tarefa == null)
-        <section class="row" id="row-task">
-            <article id="tarefa">
-                <a class="ancora-situacao" href="#">
-                    <span class="span-situacao">{{$tar->situacao}}</span>
-                    <img class="img-situacao" onmouseover="changeOn(this)" onmouseout="changeOff(this)" src="\assets\img\doing.png">
-                </a>{{$tar->titulo}}
-            </article>
-            <article id="user">{{$user->name}}</article>
-            <article id="data">{{ \Carbon\Carbon::parse($tar->data)->format('D, d \\d\\e F')}}</article>
-            <article id="prioridade">
-                <div class="span-prioridade" id="">{{$tar->prioridade}}</div>
-            </article>
-            <article id="categoria"><div class="span-categoria" id="">{{$tag->descricao}}</div></article>
-        </section>
-            @foreach($tarefa as $sub)
-                @php
-                    $cat = $sub->find($sub->id)->relCategoria;
-                    $userSub = $sub->find($sub->id)->relUser;
-                @endphp
-                @if($sub->id_tarefa == $tar->id)
-                    <section  class="row" id="subtarefas">
-                        <article id="tarefa">
-                            <a class="ancora-situacao" href="#">
-                                <span class="span-situacao">{{$sub->situacao}}</span>
-                                <img class="img-situacao" onmouseover="changeOn(this)" onmouseout="changeOff(this)" src="\assets\img\doing.png">
-                            </a>{{$sub->titulo}}
-                        </article>
-                        <article id="user">{{$userSub->name}}</article>
-                        <article id="data">{{ \Carbon\Carbon::parse($sub->data)->format('D, d \\d\\e F')}}</article>
-                        <article id="prioridade">
-                            <div class="span-prioridade" id="">{{$sub->prioridade}}</div>
-                        </article>
-                        <article id="categoria"><div class="span-categoria" id="">{{$cat->descricao}}</div></article>
-                    </section>
-                @endif
+        <ul id="ul-tarefas">
+            @foreach($tarefa as $tar)
+            @php
+                $tag = $tar->find($tar->id)->relCategoria;
+                $user = $tar->find($tar->id)->relUser;
+            @endphp
+            @if($tar->id_tarefa == null)
+            <li class="row" id="row-task" onclick="esconde()">
+                <article id="tarefa">
+                    <a class="ancora-situacao" href="#">
+                        <span class="span-situacao">{{$tar->situacao}}</span>
+                        <img class="img-situacao" onmouseover="changeOn(this)" onmouseout="changeOff(this)" src="\assets\img\doing.png">
+                    </a>{{$tar->titulo}}
+                </article>
+                <article id="user">{{$user->name}}</article>
+                <article id="data">{{ \Carbon\Carbon::parse($tar->data)->format('D, d \\d\\e F')}}</article>
+                <article id="prioridade">
+                    <div class="span-prioridade" id="">{{$tar->prioridade}}</div>
+                </article>
+                <article id="categoria"><div class="span-categoria" id="">{{$tag->descricao}}</div></article>
+            </li>
+                @foreach($tarefa as $sub)
+                    @php
+                        $cat = $sub->find($sub->id)->relCategoria;
+                        $userSub = $sub->find($sub->id)->relUser;
+                    @endphp
+                    @if($sub->id_tarefa == $tar->id)
+                        <ul id="ul-subtarefas">
+                            <li  class="row" id="subtarefas">
+                                <article id="tarefa">
+                                    <a class="ancora-situacao" href="#">
+                                        <span class="span-situacao">{{$sub->situacao}}</span>
+                                        <img class="img-situacao" onmouseover="changeOn(this)" onmouseout="changeOff(this)" src="\assets\img\doing.png">
+                                    </a>{{$sub->titulo}}
+                                </article>
+                                <article id="user">{{$userSub->name}}</article>
+                                <article id="data">{{ \Carbon\Carbon::parse($sub->data)->format('D, d \\d\\e F')}}</article>
+                                <article id="prioridade">
+                                    <div class="span-prioridade" id="">{{$sub->prioridade}}</div>
+                                </article>
+                                <article id="categoria"><div class="span-categoria" id="">{{$cat->descricao}}</div></article>
+                            </li>
+                        </ul>
+                    @endif
+                @endforeach
+            @endif   
             @endforeach
-        @endif   
-        @endforeach
+        </ul>
     </section>
 </section>
 @endsection

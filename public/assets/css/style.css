@@ -348,6 +348,12 @@ li {
     cursor: pointer;
     height: 40px;
     padding: 7px 0;
+    padding-left: 5px;
+}
+
+.lista-tarefas ul {
+    padding: 0;
+    margin: 0;
 }
 
 #row-task img, #subtarefas img{

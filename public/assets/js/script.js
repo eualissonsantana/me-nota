@@ -123,7 +123,7 @@ function defineActive() {
     }
 }
 
-function mostraTask() {
-    alert('Mostra')
+function esconde() {
+    document.getElementById("ul-subtarefas").style.v
 }
 
